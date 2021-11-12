@@ -5,11 +5,11 @@
 class Hauler < Formula
   desc "Hauler CLI"
   homepage ""
-  version "0.2.0-rc.3"
+  version "0.2.0-rc.4"
 
   on_macos do
-    url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.3/hauler_0.2.0-rc.3_darwin_all.tar.gz"
-    sha256 "d1a248210f03d824c70e795779525111b8074a3fa692c3dfe19ebd1a5d82307a"
+    url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.4/hauler_0.2.0-rc.4_darwin_all.tar.gz"
+    sha256 "e895f4f3b360c73e8a54a38af23bd29175cbf5b3f308aeec7354a3221367daa8"
 
     def install
       bin.install "hauler"
@@ -17,17 +17,17 @@ class Hauler < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.3/hauler_0.2.0-rc.3_linux_arm64.tar.gz"
-      sha256 "cd6bfa3a23c5a076ed709fb63237f18bc6a51198a771a59b3d1c6516359734f3"
+    if Hardware::CPU.intel?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.4/hauler_0.2.0-rc.4_linux_amd64.tar.gz"
+      sha256 "6734df8f8038004fac99cfd47eaa506b7c4601d481952102135612c781c297f8"
 
       def install
         bin.install "hauler"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.3/hauler_0.2.0-rc.3_linux_amd64.tar.gz"
-      sha256 "2fa0a2d15d935dd37ad3eae98b2e08d860fc693ca6c1fa5a6b92f6f06371c510"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.0-rc.4/hauler_0.2.0-rc.4_linux_arm64.tar.gz"
+      sha256 "86edafaf3795430bfc18c9aa32c8a091abf49cee888af7b6e34a51477de04fcf"
 
       def install
         bin.install "hauler"
