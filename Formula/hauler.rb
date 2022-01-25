@@ -5,29 +5,39 @@
 class Hauler < Formula
   desc "Hauler CLI"
   homepage ""
-  version "0.2.1"
+  version "0.3.0-rc.4"
 
   on_macos do
-    url "https://github.com/rancherfederal/hauler/releases/download/v0.2.1/hauler_0.2.1_darwin_all.tar.gz"
-    sha256 "46d43bdca40a8ca9643bf2283940ca241819cafe9c090a2737b281362a1e323d"
-
-    def install
-      bin.install "hauler"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.1/hauler_0.2.1_linux_amd64.tar.gz"
-      sha256 "8c94e59a31687dd272ec0a84aaa876c5614bfe4fcc59b5bc0bc7f04316c290aa"
+    if Hardware::CPU.arm?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0-rc.4/hauler_0.3.0-rc.4_darwin_arm64.tar.gz"
+      sha256 "eb08efb6af68c309b28039cde24fecc7d18d22b9de76c7ff7abc53e2b83f3f91"
 
       def install
         bin.install "hauler"
       end
     end
+    if Hardware::CPU.intel?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0-rc.4/hauler_0.3.0-rc.4_darwin_amd64.tar.gz"
+      sha256 "96a7dc82a2f008529349c8e6ad07efe6c3300ded185571cc14775a5d36b371b3"
+
+      def install
+        bin.install "hauler"
+      end
+    end
+  end
+
+  on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.1/hauler_0.2.1_linux_arm64.tar.gz"
-      sha256 "6397ddf3d303e2a8e627b36d413939cfc952e4136c198410dddb166ac4699796"
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0-rc.4/hauler_0.3.0-rc.4_linux_arm64.tar.gz"
+      sha256 "cf5ab820aa795012ad09acc00e15b83b9fda88e3f9a8befa2fd2c8124bc73a52"
+
+      def install
+        bin.install "hauler"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0-rc.4/hauler_0.3.0-rc.4_linux_amd64.tar.gz"
+      sha256 "5db1de7bbffe57c877687c370336773ca5b1ad4dcfb77a2db50cfdc57be1a3c6"
 
       def install
         bin.install "hauler"
