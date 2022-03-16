@@ -5,39 +5,29 @@
 class Hauler < Formula
   desc "Hauler CLI"
   homepage ""
-  version "0.3.0"
+  version "0.2.2-alpha1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0/hauler_0.3.0_darwin_amd64.tar.gz"
-      sha256 "be5000472f408dfbb5dc1f5d077709d8e5b4b580e87fdfee34395d123942804a"
+    url "https://github.com/rancherfederal/hauler/releases/download/v0.2.2-alpha1/hauler_0.2.2-alpha1_darwin_all.tar.gz"
+    sha256 "3a33d981d5b460935b3b4be02ed6b95f2a022b0b420ed20dda48c29156b20f40"
 
-      def install
-        bin.install "hauler"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0/hauler_0.3.0_darwin_arm64.tar.gz"
-      sha256 "257cc30f96fa7e5aebb153b6ae2c01ad4ed94663dc8f468d32ce02f00fd8ed37"
-
-      def install
-        bin.install "hauler"
-      end
+    def install
+      bin.install "hauler"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0/hauler_0.3.0_linux_amd64.tar.gz"
-      sha256 "fa201ad8b1ed713798d8826142c89b7b037c54f3f461ad9df1823ee33935e8b5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.2-alpha1/hauler_0.2.2-alpha1_linux_arm64.tar.gz"
+      sha256 "7c25c5b531bd18d61dd1e27e9a75a67d7674e4c185c535da84fe78c1697215c1"
 
       def install
         bin.install "hauler"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rancherfederal/hauler/releases/download/v0.3.0/hauler_0.3.0_linux_arm64.tar.gz"
-      sha256 "076be454c104c65edf00a92f0375bd4e95179ca8946b597f95534d41551c8ef8"
+    if Hardware::CPU.intel?
+      url "https://github.com/rancherfederal/hauler/releases/download/v0.2.2-alpha1/hauler_0.2.2-alpha1_linux_amd64.tar.gz"
+      sha256 "7e51f8b16e6c55574d57d1d9ea5ce97e7b8d39356104ddf25a624d56cc3005fb"
 
       def install
         bin.install "hauler"
