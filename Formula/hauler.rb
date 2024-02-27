@@ -5,20 +5,20 @@
 class Hauler < Formula
   desc "Hauler CLI"
   homepage ""
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.0/hauler_1.0.0_darwin_amd64.tar.gz"
-      sha256 "579f4214fd8dc814af77a04021ef4f8f6a369ab2b375efef7ca6ba29cb86cb76"
+      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.1/hauler_1.0.1_darwin_amd64.tar.gz"
+      sha256 "a3b100526ecd6ea05e66ab9772273d841cc87275a098a16f6ab1d5cba3e2dbac"
 
       def install
         bin.install "hauler"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.0/hauler_1.0.0_darwin_arm64.tar.gz"
-      sha256 "020dc82ae9533f20f9372344145825721b0763459e4ce8e79ec2e2489af8f44f"
+      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.1/hauler_1.0.1_darwin_arm64.tar.gz"
+      sha256 "635bd2708c456a3b555f6dbe936490d83e061119d7611e41acfed592d2a3c966"
 
       def install
         bin.install "hauler"
@@ -28,16 +28,16 @@ class Hauler < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.0/hauler_1.0.0_linux_amd64.tar.gz"
-      sha256 "e022bfa6fa1771720da93ff4627cde24800ef7d4625ea366d19178e172b5401c"
+      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.1/hauler_1.0.1_linux_amd64.tar.gz"
+      sha256 "9b1dd5da3add8ee289eb40b81a52fd1cfabb2a86c57134b04be75a2cb8cb99d9"
 
       def install
         bin.install "hauler"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.0/hauler_1.0.0_linux_arm64.tar.gz"
-      sha256 "adafe3ebaab27beba2bfbd884ac1c5f7b0b5730ad4eb18c4d67578143bd4613a"
+      url "https://github.com/rancherfederal/hauler/releases/download/v1.0.1/hauler_1.0.1_linux_arm64.tar.gz"
+      sha256 "e6abafbebf1d71e4f5d05279b98aa5aa506dd6343317fe8d0850bdd7233918f0"
 
       def install
         bin.install "hauler"
