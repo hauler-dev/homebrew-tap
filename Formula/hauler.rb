@@ -10,7 +10,7 @@ class Hauler < Formula
   on_macos do
     on_intel do
       url "https://github.com/hauler-dev/hauler/releases/download/v1.1.0-rc.5/hauler_1.1.0-rc.5_darwin_amd64.tar.gz"
-      sha256 "4223d273555fca9841d3fba8c7d2df1c527470113c1e7f1b9df056ada2d1b000"
+      sha256 "1bdb8c664777e8ccb2ecc231daf591c35614727b579231244270c1eea3397836"
 
       def install
         bin.install "hauler"
@@ -18,7 +18,7 @@ class Hauler < Formula
     end
     on_arm do
       url "https://github.com/hauler-dev/hauler/releases/download/v1.1.0-rc.5/hauler_1.1.0-rc.5_darwin_arm64.tar.gz"
-      sha256 "13b3d106a413d2ad2eedb48917427c3fe75ed4d35196e278a6d6ac21fec8f247"
+      sha256 "b26fc0040dd673c3fb9a69430189e87973eae0ddcd763655f9c29ce76a8a3727"
 
       def install
         bin.install "hauler"
@@ -30,7 +30,7 @@ class Hauler < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/hauler-dev/hauler/releases/download/v1.1.0-rc.5/hauler_1.1.0-rc.5_linux_amd64.tar.gz"
-        sha256 "9a5fe44189a2a0a3327ad9926d3c0a335d1ecdcd129381fbb1a9a101b2027f46"
+        sha256 "8b0694b0d63e6ddc2937c2808189b451b99b0414318536bef91772827deeeb56"
 
         def install
           bin.install "hauler"
@@ -40,7 +40,7 @@ class Hauler < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/hauler-dev/hauler/releases/download/v1.1.0-rc.5/hauler_1.1.0-rc.5_linux_arm64.tar.gz"
-        sha256 "f9ea6a741352f09e28468acfd07c75b307d5cfef75e37a7f23d67c68c9c3038d"
+        sha256 "dc8fe2dc564104032259cb439d36bb03bbd168523e55ef0aa9e9fbf383fc3f7d"
 
         def install
           bin.install "hauler"
