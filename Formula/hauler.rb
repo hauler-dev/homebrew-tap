@@ -5,20 +5,20 @@
 class Hauler < Formula
   desc "Hauler CLI"
   homepage ""
-  version "1.1.1-rc.1"
+  version "1.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1-rc.1/hauler_1.1.1-rc.1_darwin_amd64.tar.gz"
-      sha256 "37cba825be846fbd3c3301c35ecf06c3f78be5f48137c56676e769d5c53c3eff"
+      url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1/hauler_1.1.1_darwin_amd64.tar.gz"
+      sha256 "e41c69663cd8401b61220876a0778b67b149baff2a46f5a5ffad3144bd4e674b"
 
       def install
         bin.install "hauler"
       end
     end
     on_arm do
-      url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1-rc.1/hauler_1.1.1-rc.1_darwin_arm64.tar.gz"
-      sha256 "58c926b312b8ada328a3ad50f057f048379afe852eeac222fe9dafc8ce006ecc"
+      url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1/hauler_1.1.1_darwin_arm64.tar.gz"
+      sha256 "d32aa20c83a32f120dbab1b6d35e4e15b138455f6c4998d58792b19ca7d0a422"
 
       def install
         bin.install "hauler"
@@ -29,8 +29,8 @@ class Hauler < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1-rc.1/hauler_1.1.1-rc.1_linux_amd64.tar.gz"
-        sha256 "1ef1a76a3d1c1ca90fb51f31c2d64dd850e860a12f03052600d730d3a34e4894"
+        url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1/hauler_1.1.1_linux_amd64.tar.gz"
+        sha256 "8abd582b8fa644d965f5b9049d6c357478b70da00b2cbfe7bddaf37ccc4cceac"
 
         def install
           bin.install "hauler"
@@ -39,8 +39,8 @@ class Hauler < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1-rc.1/hauler_1.1.1-rc.1_linux_arm64.tar.gz"
-        sha256 "3780775cb7cf0b2b371a6b362aa1ab84c7b84892e77842aa24f9dc2ec8871aa7"
+        url "https://github.com/hauler-dev/hauler/releases/download/v1.1.1/hauler_1.1.1_linux_arm64.tar.gz"
+        sha256 "6a69b826d0d8d195c069f6a3230f014e153460162aa6428eee3bbd4f626ddd7f"
 
         def install
           bin.install "hauler"
