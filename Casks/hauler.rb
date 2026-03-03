@@ -3,7 +3,7 @@ cask "hauler" do
   name "hauler"
   desc "Hauler: Airgap Swiss Army Knife"
   homepage ""
-  version "1.4.1"
+  version "1.4.2-rc.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "hauler" do
   on_macos do
     on_intel do
       url "https://github.com/hauler-dev/hauler/releases/download/v#{version}/hauler_#{version}_darwin_amd64.tar.gz"
-      sha256 "c7d5161a26d686d2bddc7e4177451b823c5061d9880cf9c91e66b8d5b5375131"
+      sha256 "1cb943fc0190b45cc9ea3421bdcaab86bd49df0584c5b440423a159d1e1ccd62"
     end
     on_arm do
       url "https://github.com/hauler-dev/hauler/releases/download/v#{version}/hauler_#{version}_darwin_arm64.tar.gz"
-      sha256 "a52938ec9cdec7c54181ba52c8a8205a0cb6cd7473974ad420c1a3a90cf326a7"
+      sha256 "6791834eb072a70f7c4c10c8cc432973e14613f8ce1a7ddf7fcd97d828ec5d32"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/hauler-dev/hauler/releases/download/v#{version}/hauler_#{version}_linux_amd64.tar.gz"
-      sha256 "362b0809660072d6c0fffda63eafd5ca41ecfb6c66c1157a65293c51b75093de"
+      sha256 "9683949e4b8330d0542408d720c12b5cc9ddff22f1ce6b36e3b278c5f7a1c7f2"
     end
     on_arm do
       url "https://github.com/hauler-dev/hauler/releases/download/v#{version}/hauler_#{version}_linux_arm64.tar.gz"
-      sha256 "738bb54a1e8240e49b01bbd250ad5f087ccaf1ea8cf40e402ab3f6e4bc94a3b4"
+      sha256 "770b116841d2aa1fc0dab41124b69a313797854405800280cf96abb28b817991"
     end
   end
 
