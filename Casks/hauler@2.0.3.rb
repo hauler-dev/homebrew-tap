@@ -30,6 +30,10 @@ cask "hauler@2.0.3" do
   livecheck do
     skip "Auto-generated on release."
   end
+  conflicts_with cask: [
+      "hauler",
+      "hauler-dev",
+    ]
 
   binary "hauler"
 
