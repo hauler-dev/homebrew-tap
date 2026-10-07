@@ -24,7 +24,7 @@ cask "hauler-dev" do
   end
 
   name "hauler-dev"
-  desc "Hauler: Airgap Swiss Army Knife (includes release candidates and dev builds)"
+  desc "Hauler: Airgap Swiss Army Knife (release candidates and dev builds)"
   homepage ""
 
   livecheck do
